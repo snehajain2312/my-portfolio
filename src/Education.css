@@ -1,0 +1,273 @@
+.education {
+  position: relative;
+  padding: 100px 12%;
+  overflow: hidden;
+  background: var(--bg);
+  color: var(--text);
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.education-container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* ---------- Heading ---------- */
+.education-heading {
+  margin-bottom: 60px;
+  text-align: center;
+}
+
+.education-tag {
+  display: inline-block;
+  margin-bottom: 14px;
+  color: var(--accent);
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.education-heading h2 {
+  margin: 0 0 14px;
+  font-family: "Bricolage Grotesque", "DM Sans", sans-serif;
+  font-size: clamp(2rem, 4vw, 2.9rem);
+  font-weight: 800;
+  letter-spacing: -1.5px;
+}
+
+.education-heading h2 span {
+  background: var(--gradient-text);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.education-heading p {
+  max-width: 520px;
+  margin: 0 auto;
+  color: var(--text-secondary);
+  font-size: 0.98rem;
+  line-height: 1.7;
+}
+
+/* ---------- Timeline ---------- */
+.education-timeline {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 0 0 0 36px;
+  list-style: none;
+}
+
+.education-line {
+  position: absolute;
+  left: 9px;
+  top: 15px;
+  bottom: 15px;
+  width: 2px;
+  background: linear-gradient(to bottom, var(--accent), var(--accent-2), transparent);
+}
+
+.education-card {
+  position: relative;
+  display: flex;
+  gap: 24px;
+  padding: 32px;
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  background: var(--surface);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.education-card::before {
+  content: "";
+  position: absolute;
+  left: -34px;
+  top: 38px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 0 4px var(--glow), 0 0 14px var(--accent);
+}
+
+.education-card:hover {
+  border-color: var(--border-hover);
+  box-shadow: 0 14px 40px var(--glow);
+}
+
+/* ---------- Icon ---------- */
+.education-icon {
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  width: 58px;
+  height: 58px;
+  border-radius: 15px;
+  background: var(--glow);
+  font-size: 27px;
+}
+
+/* ---------- Content ---------- */
+.education-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.education-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.education-year {
+  color: var(--accent);
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.education-status {
+  padding: 5px 12px;
+  border-radius: 20px;
+  background: rgba(34, 197, 94, 0.12);
+  color: #22c55e;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.light-theme .education-status {
+  color: #15803d;
+}
+
+.education-content h3 {
+  margin: 0 0 6px;
+  font-family: "Bricolage Grotesque", "DM Sans", sans-serif;
+  font-size: 1.5rem;
+}
+
+.education-content h4 {
+  margin: 0 0 16px;
+  color: var(--accent-2);
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.education-college {
+  margin: 0;
+  color: var(--text);
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+.education-location {
+  margin: 8px 0 0;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+}
+
+/* ---------- CGPA ---------- */
+.education-score {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 24px;
+  padding: 16px 20px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--glow);
+}
+
+.education-score span {
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+}
+
+.education-score strong {
+  color: var(--accent);
+  font-size: 1.4rem;
+}
+
+.education-score small {
+  color: var(--text-muted);
+  font-size: 0.78rem;
+  font-weight: 400;
+}
+
+/* ---------- Footer note ---------- */
+.education-footer {
+  margin-top: 45px;
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 0.88rem;
+}
+
+.education-footer span {
+  margin-right: 8px;
+  color: var(--accent);
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 768px) {
+  .education {
+    padding: 75px 6%;
+  }
+
+  .education-heading {
+    margin-bottom: 45px;
+  }
+
+  .education-card {
+    padding: 24px 18px;
+    gap: 16px;
+  }
+
+  .education-icon {
+    width: 46px;
+    height: 46px;
+    font-size: 22px;
+  }
+
+  .education-content h3 {
+    font-size: 1.25rem;
+  }
+
+  .education-content h4 {
+    font-size: 0.92rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .education-timeline {
+    padding-left: 26px;
+  }
+
+  .education-line {
+    left: 6px;
+  }
+
+  .education-card {
+    flex-direction: column;
+  }
+
+  .education-card::before {
+    left: -26px;
+  }
+
+  .education-top,
+  .education-score {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .education,
+  .education-card {
+    transition: none;
+  }
+}

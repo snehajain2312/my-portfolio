@@ -1,9 +1,93 @@
+/* =========================================================
+   THEME: Crimson · Pink · Orange
+   Change colors ONLY in these two blocks. Every section
+   (Hero, About, Skills, Projects...) reads from them.
+   ========================================================= */
+
+.portfolio.dark-theme {
+  --bg: #0c0c0e;
+  --bg-color: #0c0c0e;
+  --surface: #161618;
+  --surface-soft: rgba(22, 22, 24, 0.78);
+  --border: rgba(255, 255, 255, 0.1);
+  --border-color: rgba(255, 255, 255, 0.1);
+  --border-hover: rgba(255, 95, 115, 0.6);
+  --text: #f5f5f6;
+  --text-secondary: #b3b3ba;
+  --text-muted: #8b8b93;
+  --accent: #ff5470;
+  --accent-2: #ff8a3d;
+  --accent-warm: #ffb15c;
+  --on-accent: #1a0508;
+  --glow: rgba(255, 84, 112, 0.09);
+  --gradient-text: linear-gradient(100deg, #ff6b9d, #ff5470, #ff9a4d);
+  --gradient-bar: linear-gradient(90deg, #ff4d73, #ff8a3d);
+}
+
+.portfolio.light-theme {
+  --bg: #fff7f4;
+  --bg-color: #fff7f4;
+  --surface: #ffffff;
+  --surface-soft: rgba(255, 255, 255, 0.85);
+  --border: #ffdcd3;
+  --border-color: #ffdcd3;
+  --border-hover: #f58a8f;
+  --text: #3a1218;
+  --text-secondary: #7a4a50;
+  --text-muted: #94656b;
+  --accent: #e11d48;
+  --accent-2: #ea580c;
+  --accent-warm: #d9480f;
+  --on-accent: #ffffff;
+  --glow: rgba(225, 29, 72, 0.12);
+  --gradient-text: linear-gradient(100deg, #db2777, #e11d48, #ea580c);
+  --gradient-bar: linear-gradient(90deg, #e11d48, #f97316);
+}
+
+/* =========================================================
+   Base
+   ========================================================= */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+}
+
+.portfolio {
+  min-height: 100vh;
+  background: var(--bg);
+  color: var(--text);
+  font-family: "DM Sans", system-ui, sans-serif;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.portfolio section {
+  scroll-margin-top: 80px;
+}
+
+.portfolio ::selection {
+  background: var(--accent);
+  color: var(--on-accent);
+}
+
+.portfolio a:focus-visible,
+.portfolio button:focus-visible {
+  outline: 2px solid var(--accent-warm);
+  outline-offset: 3px;
+}
+
+/* =========================================================
+   About
+   ========================================================= */
 
 .about {
   position: relative;
   padding: 100px 12%;
-  background: #07070b;
-  color: #f8fafc;
+  background: var(--bg);
+  color: var(--text);
   overflow: hidden;
   transition: background 0.3s ease, color 0.3s ease;
 }
@@ -13,14 +97,13 @@
   margin: 0 auto;
 }
 
-/* Heading */
 .about-heading {
   margin-bottom: 45px;
 }
 
 .about-eyebrow {
   margin: 0 0 12px;
-  color: #a78bfa;
+  color: var(--accent);
   font-size: 0.8rem;
   font-weight: 700;
   letter-spacing: 4px;
@@ -28,13 +111,14 @@
 
 .about h2 {
   margin: 0;
+  font-family: "Bricolage Grotesque", "DM Sans", sans-serif;
   font-size: clamp(2.2rem, 4vw, 3.2rem);
   font-weight: 800;
   letter-spacing: -2px;
 }
 
 .about h2 span {
-  background: linear-gradient(100deg, #c084fc, #818cf8, #38bdf8);
+  background: var(--gradient-text);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -45,10 +129,9 @@
   height: 4px;
   margin-top: 18px;
   border-radius: 10px;
-  background: linear-gradient(90deg, #a855f7, #3b82f6);
+  background: var(--gradient-bar);
 }
 
-/* Layout */
 .about-content {
   display: grid;
   grid-template-columns: 1.15fr 0.85fr;
@@ -56,19 +139,17 @@
   align-items: stretch;
 }
 
-/* Main card */
 .about-card {
   padding: 35px;
-  border: 1px solid rgba(168, 85, 247, 0.25);
+  border: 1px solid var(--border);
   border-radius: 20px;
-  background: linear-gradient(145deg, #11111d, #0a0a10);
-  transition: border-color 0.3s ease, box-shadow 0.3s ease,
-    background 0.3s ease;
+  background: var(--surface);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .about-card:hover {
-  border-color: rgba(168, 85, 247, 0.65);
-  box-shadow: 0 10px 40px rgba(124, 58, 237, 0.1);
+  border-color: var(--border-hover);
+  box-shadow: 0 10px 40px var(--glow);
 }
 
 .about-card-icon {
@@ -77,25 +158,24 @@
   width: 58px;
   height: 58px;
   margin-bottom: 25px;
-  border: 1px solid rgba(168, 85, 247, 0.4);
+  border: 1px solid var(--border);
   border-radius: 15px;
-  background: rgba(168, 85, 247, 0.12);
-  color: #c084fc;
+  background: var(--glow);
+  color: var(--accent);
   font-size: 1.35rem;
   font-weight: 800;
-  box-shadow: 0 0 25px rgba(168, 85, 247, 0.08);
 }
 
 .about-card h3 {
   margin: 0 0 18px;
-  color: #f8fafc;
+  color: var(--text);
   font-size: 1.45rem;
   line-height: 1.4;
 }
 
 .about-card p {
   margin: 0 0 15px;
-  color: #a1a1b5;
+  color: var(--text-secondary);
   font-size: 0.98rem;
   line-height: 1.9;
 }
@@ -104,7 +184,6 @@
   margin-bottom: 0;
 }
 
-/* Highlight cards */
 .about-highlights {
   display: flex;
   flex-direction: column;
@@ -116,22 +195,20 @@
   align-items: flex-start;
   gap: 18px;
   padding: 23px 20px;
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border: 1px solid var(--border);
   border-radius: 16px;
-  background: rgba(17, 17, 29, 0.7);
-  transition: transform 0.3s ease, border-color 0.3s ease,
-    background 0.3s ease;
+  background: var(--surface-soft);
+  transition: transform 0.3s ease, border-color 0.3s ease;
 }
 
 .about-highlight:hover {
   transform: translateX(5px);
-  border-color: rgba(129, 140, 248, 0.5);
-  background: #10101c;
+  border-color: var(--border-hover);
 }
 
 .highlight-number {
   flex-shrink: 0;
-  color: #a78bfa;
+  color: var(--accent);
   font-size: 0.9rem;
   font-weight: 800;
   letter-spacing: 1px;
@@ -139,93 +216,57 @@
 
 .about-highlight h3 {
   margin: 0 0 7px;
-  color: #e2e8f0;
+  color: var(--text);
   font-size: 1rem;
 }
 
 .about-highlight p {
   margin: 0;
-  color: #9090a6;
+  color: var(--text-muted);
   font-size: 0.88rem;
   line-height: 1.7;
 }
 
-/* Soft Lavender light theme */
-.light-theme .about {
-  background:
-    radial-gradient(ellipse at 5% 5%, rgba(221, 214, 254, 0.4), transparent 40%),
-    #faf8ff;
-  color: #29213f;
+/* =========================================================
+   Footer
+   ========================================================= */
+
+.portfolio-footer {
+  padding: 24px 20px;
+  text-align: center;
+  border-top: 1px solid var(--border);
+  background: var(--bg);
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  line-height: 1.8;
+  transition: background-color 0.3s ease, color 0.3s ease,
+    border-color 0.3s ease;
 }
 
-.light-theme .about-eyebrow {
-  color: #8262c8;
+.portfolio-footer p {
+  margin: 4px 0;
 }
 
-.light-theme .about h2 {
-  color: #302747;
+.portfolio-footer span {
+  display: inline-block;
+  color: var(--accent);
+  animation: heartbeat 1.5s ease-in-out infinite;
 }
 
-.light-theme .about h2 span {
-  background: linear-gradient(100deg, #9b70d6, #8174d9, #739ce7);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+@keyframes heartbeat {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
 }
 
-.light-theme .about-underline {
-  background: linear-gradient(90deg, #b794f6, #91a7f5);
-}
+/* =========================================================
+   Responsive + motion
+   ========================================================= */
 
-.light-theme .about-card {
-  border-color: #e8defb;
-  background: rgba(255, 255, 255, 0.88);
-  box-shadow: 0 12px 35px rgba(104, 78, 150, 0.06);
-}
-
-.light-theme .about-card:hover {
-  border-color: #c8b4f0;
-  box-shadow: 0 14px 38px rgba(104, 78, 150, 0.12);
-}
-
-.light-theme .about-card-icon {
-  border-color: #e3d5fa;
-  background: #f2ebff;
-  color: #8b69cb;
-  box-shadow: none;
-}
-
-.light-theme .about-card h3 {
-  color: #382d50;
-}
-
-.light-theme .about-card p {
-  color: #716780;
-}
-
-.light-theme .about-highlight {
-  border-color: #e9e1f5;
-  background: rgba(255, 255, 255, 0.78);
-}
-
-.light-theme .about-highlight:hover {
-  border-color: #cbb8f1;
-  background: #fff;
-}
-
-.light-theme .highlight-number {
-  color: #8b69cb;
-}
-
-.light-theme .about-highlight h3 {
-  color: #403451;
-}
-
-.light-theme .about-highlight p {
-  color: #786e87;
-}
-
-/* Responsive */
 @media (max-width: 850px) {
   .about {
     padding: 80px 7%;
@@ -252,81 +293,31 @@
   .about h2 {
     letter-spacing: -1px;
   }
+
+  .portfolio-footer {
+    padding: 20px 14px;
+    font-size: 0.82rem;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .portfolio,
   .about,
   .about-card,
-  .about-highlight {
+  .about-highlight,
+  .portfolio-footer {
     transition: none;
   }
 
   .about-highlight:hover {
     transform: none;
   }
-}
 
-
-/* Footer CSS */
-
-.portfolio-footer {
-  padding: 24px 20px;
-  text-align: center;
-  border-top: 1px solid var(--border-color);
-  background: var(--bg-color);
-  color: var(--text-secondary);
-  font-size: 0.9rem;
-  line-height: 1.8;
-  transition:
-    background-color 0.3s ease,
-    color 0.3s ease,
-    border-color 0.3s ease;
-}
-
-.portfolio-footer p {
-  margin: 4px 0;
-}
-
-.portfolio-footer span {
-  color: #c084fc;
-  display: inline-block;
-  animation: heartbeat 1.5s ease-in-out infinite;
-}
-
-.light-theme .portfolio-footer {
-  background: #f8f5ff;
-  color: #716582;
-  border-top-color: #e5dcf5;
-}
-
-.light-theme .portfolio-footer span {
-  color: #a855f7;
-}
-
-@keyframes heartbeat {
-  0%,
-  100% {
-    transform: scale(1);
-  }
-
-  50% {
-    transform: scale(1.2);
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
   .portfolio-footer span {
     animation: none;
-  }
-
-  .portfolio-footer {
-    transition: none;
-  }
-}
-
-@media (max-width: 480px) {
-  .portfolio-footer {
-    padding: 20px 14px;
-    font-size: 0.82rem;
   }
 }

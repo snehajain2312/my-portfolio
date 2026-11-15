@@ -6,6 +6,8 @@ import About from "./About";
 import Skills from "./Skills";
 import Projects from "./Projects";
 import Contact from "./Contact";
+import Education from "./Education";
+import Experience from "./Experience";
 
 function App() {
   const [theme, setTheme] = useState("dark");
@@ -23,6 +25,8 @@ function App() {
         <About />
         <Skills />
         <Projects />
+        <Education />
+        <Experience/>
         <Contact />
       </main>
 
