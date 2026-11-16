@@ -46,8 +46,8 @@ function Navbar({ theme, setTheme }) {
         ))}
 
         <a
-          href="/Sneha-Jain-Resume.pdf"
-          download="Sneha-Jain-Resume.pdf"
+          href="/Sneha_Jain_Resume.pdf"
+          download="Sneha_Jain_Resume.pdf"
           className="nav-resume"
           onClick={closeMenu}
         >

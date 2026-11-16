@@ -131,8 +131,8 @@ function Hero({
             </a>
 
             <a
-              href="/Sneha-Jain-Resume.pdf"
-              download="Sneha-Jain-Resume.pdf"
+              href="/Sneha_Jain_Resume.pdf"
+              download="Sneha_Jain_Resume.pdf"
               className="hero-btn hero-btn-secondary"
             >
               Download resume
