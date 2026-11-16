@@ -10,7 +10,7 @@ import Education from "./Education";
 import Experience from "./Experience";
 
 function App() {
-  const [theme, setTheme] = useState("dark");
+  const [theme, setTheme] = useState("light");
   return (
     <div className={`portfolio ${theme}-theme`}>
       <Navbar theme={theme} setTheme={setTheme} />

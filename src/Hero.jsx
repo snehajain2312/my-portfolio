@@ -3,9 +3,9 @@ import "./Hero.css";
 
 /* ---- EDIT YOUR DETAILS HERE ---- */
 const SOCIALS = [
-  { label: "GitHub", href: "https://github.com/your-username", icon: "github" },
-  { label: "LinkedIn", href: "https://linkedin.com/in/your-username", icon: "linkedin" },
-  { label: "Email", href: "mailto:your-email@example.com", icon: "mail" },
+  { label: "GitHub", href: "https://github.com/snehajain2312", icon: "github" },
+  { label: "LinkedIn", href: "https://www.linkedin.com/in/sneha-jain-b48208238/", icon: "linkedin" },
+  { label: "Email", href: "mailto:snehajain@23122002@gmail.com", icon: "mail" },
 ];
 
 const STATS = [
